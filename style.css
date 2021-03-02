@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    height: 15vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo i {
+    color: #18bc9c;
+    font-size: 3rem;
+    margin-right: 0.5em;
+}
+
+.logo h1 {
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+}
+
+.input {
+    width: 650px;
+    height: 80vh;
+}
+
+.input form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 5em;
+}
+
+form input {
+    border: none;
+    height: 2.7em;
+    border-radius: 0.4em;
+    border: 1px solid lightgray;
+    margin: 0.5em;
+    padding: 0 1em;
+}
+
+form label {
+    margin-left: 0.5em;
+    ;
+}
+
+form #add {
+    background-color: #000;
+    color: #fff;
+    margin-top: 1em;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    width: 650px;
+    height: 80vh;
+    margin-top: 4rem;
+
+}
+
+.list .nag {
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+
+    width: 100%;
+    display: flex;
+
+}
+
+.nag h3 {
+    padding: 0 5rem;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5em;
+
+}
+
+.row div {
+    display: flex;
+    width: 250px;
+    padding: 0 1rem;
+    margin: 5px 0;
+}
+
+.delete {
+
+    background: #ff0000;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 0 0.7em;
+    border-radius: 0.3em;
+    transition: 0.8s;
+}
+
+.delete:hover {
+    transform: scale(1.05);
+    background-color: #ff6347;
+}
+.logo1{
+    position: fixed;
+   left:0;
+    bottom: 0;
+}
+@media (max-width:600px){
+    .container{
+        flex-direction: column;
+    }
+    .logo{
+        height: 10%;
+    }
+    .input,.list{
+        width: 350px;
+        height: 30%;
+    }
+    .row {
+      font-size: 0.7em;
+      margin-left: 20px;
+      justify-content: center;
+    }
+    .row div{
+        margin: 0;
+        padding: 0;
+    }
+}
