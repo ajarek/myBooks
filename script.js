@@ -40,6 +40,11 @@ const saveStorage = () => {
     names.push(newBook)
     localStorage.setItem('names', JSON.stringify(names))
 }
+const clearData = () => {
+    title.value = ""
+    author.value = ""
+}
+
 
 const saveData = () => {
     const row = document.createElement('div')
@@ -47,12 +52,9 @@ const saveData = () => {
     row.innerHTML = `<div>${title.value}</div><div>${author.value}</div><div><button class="delete" onclick="deleteData()">X</button></div>`
     lista.appendChild(row)
     saveStorage()
+    clearData()
 }
-const clearData = () => {
-    title.value = ""
-    author.value = ""
-}
-clearData()
+
 
 function removeStorage(name) {
     let books = JSON.parse(localStorage.getItem('names'));
