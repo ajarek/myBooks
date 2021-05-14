@@ -40,11 +40,11 @@ const saveStorage = () => {
     names.push(newBook)
     localStorage.setItem('names', JSON.stringify(names))
 }
+
 const clearData = () => {
     title.value = ""
     author.value = ""
 }
-
 
 const saveData = () => {
     const row = document.createElement('div')
@@ -55,7 +55,6 @@ const saveData = () => {
     clearData()
 }
 
-
 function removeStorage(name) {
     let books = JSON.parse(localStorage.getItem('names'));
     books.forEach(function (book, index) {
@@ -65,7 +64,6 @@ function removeStorage(name) {
     })
     localStorage.setItem('names', JSON.stringify(books));
 }
-
 
 btn.addEventListener('click', saveData)
 
